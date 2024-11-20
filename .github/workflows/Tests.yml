@@ -71,9 +71,9 @@ jobs:
         run: |
           composer global require php-coveralls/php-coveralls
           php ~/.composer/vendor/bin/php-coveralls --coverage_clover=build/logs/clover.xml -v
-        
+
       - name: Upload Scrutinizer coverage
+        uses: sudo-bot/action-scrutinizer@latest
         if: github.repository == 'Austinb/GameQ'
-        run: |
-          composer global require scrutinizer/ocular ${{ matrix.ocular }}
-          php ~/.composer/vendor/bin/ocular code-coverage:upload --format=php-clover build/logs/clover.xml --revision=${{ github.event.pull_request.head.sha || github.sha }}
+        with:
+            cli-args: "--format=php-clover build/logs/clover.xml --revision=${{ github.event.pull_request.head.sha || github.sha }}"
