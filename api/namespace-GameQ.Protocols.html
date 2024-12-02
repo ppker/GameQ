@@ -25,6 +25,9 @@
 			<li class="menuGroup-item">
 				<a href="namespace-GameQ.Filters.html">Filters</a>
 			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-GameQ.Helpers.html">Helpers</a>
+			</li>
 			<li class="menuGroup-item active">
 				<a href="namespace-GameQ.Protocols.html">Protocols</a>
 			</li>
@@ -660,6 +663,11 @@
 						</a>
 					</li>
 					<li>
+						<a href="GameQ.Protocols.Stationeers.html">
+							Stationeers
+						</a>
+					</li>
+					<li>
 						<a href="GameQ.Protocols.Stormworks.html">
 							Stormworks
 						</a>
@@ -1102,15 +1110,15 @@ Unable to make player information calls work as the protocol does not like paral
 			<tr>
 				<td class="table-cell" colspan="1"><a href="GameQ.Protocols.Gamespy2.html">Gamespy2</a></td>
 				<td class="table-cell"><p>GameSpy2 Protocol class Given the ability for non utf-8 characters to be used as hostnames, player names, etc... this
-version returns all strings utf-8 encoded (utf8_encode).  To access the proper version of a
-string response you must use utf8_decode() on the specific response.</p>
+version returns all strings utf-8 encoded.  To access the proper version of a
+string response you must use Str::utf8ToIso() on the specific response.</p>
 </td>
 			</tr>
 			<tr>
 				<td class="table-cell" colspan="1"><a href="GameQ.Protocols.Gamespy3.html">Gamespy3</a></td>
 				<td class="table-cell"><p>GameSpy3 Protocol class Given the ability for non utf-8 characters to be used as hostnames, player names, etc... this
-version returns all strings utf-8 encoded (utf8_encode).  To access the proper version of a
-string response you must use utf8_decode() on the specific response.</p>
+version returns all strings utf-8 encoded.  To access the proper version of a
+string response you must use Str::utf8ToIso() on the specific response.</p>
 </td>
 			</tr>
 			<tr>
@@ -1456,6 +1464,12 @@ that rely on the source protocol for game querying.</p>
 			<tr>
 				<td class="table-cell" colspan="1"><a href="GameQ.Protocols.Starmade.html">Starmade</a></td>
 				<td class="table-cell"><p>StarMade Protocol Class StarMade server query protocol class Credit to Robin Promesberger <a href="mailto:schema@star-made.org">schema@star-made.org</a> for providing Java based querying as a roadmap</p>
+</td>
+			</tr>
+			<tr>
+				<td class="table-cell" colspan="1"><a href="GameQ.Protocols.Stationeers.html">Stationeers</a></td>
+				<td class="table-cell"><p>Stationeers Protocol Class <strong>Note:</strong> This protocol does use the offical, centralized &quot;Metaserver&quot; to query the list of all available servers. This
+is effectively a host controlled by a third party which could interfere with the functionality of this protocol.</p>
 </td>
 			</tr>
 			<tr>
